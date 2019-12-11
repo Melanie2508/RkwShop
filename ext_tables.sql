@@ -67,7 +67,7 @@ CREATE TABLE tx_rkwshop_domain_model_product (
 	image int(11) unsigned NOT NULL default '0',
 	download int(11) unsigned NOT NULL default '0',
 	product_bundle int(11) unsigned DEFAULT '0',
-	allow_single_order tinyint(4) unsigned DEFAULT '1' NOT NULL,
+	allow_single_order tinyint(4) unsigned DEFAULT '0' NOT NULL,
 
 	stock varchar(255) DEFAULT '' NOT NULL,
     ordered_external int(11) unsigned DEFAULT '0' NOT NULL,

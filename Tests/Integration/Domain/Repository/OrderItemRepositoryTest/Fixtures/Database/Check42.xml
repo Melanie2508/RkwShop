@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+
+    <!-- products -->
+    <tx_rkwshop_domain_model_product>
+        <uid>1</uid>
+        <pid>1</pid>
+        <title>Leitfaden deluxe</title>
+        <subtitle>Mit Unterüberschriften kann man alles länger machen</subtitle>
+        <stock>0</stock>
+        <record_type>0</record_type>
+    </tx_rkwshop_domain_model_product>
+
+    <!-- order -->
+    <tx_rkwshop_domain_model_order>
+        <uid>1</uid>
+        <pid>1</pid>
+        <email>test@dummy.de</email>
+        <remark>Toller Hinweis!!!</remark>
+        <frontend_user>0</frontend_user>
+        <status>0</status>
+        <order_item>1,2,3</order_item>
+        <hidden>1</hidden>
+    </tx_rkwshop_domain_model_order>
+
+    <!-- order items -->
+    <tx_rkwshop_domain_model_orderitem>
+        <uid>1</uid>
+        <pid>1</pid>
+        <amount>4</amount>
+        <product>1</product>
+        <ext_order>1</ext_order>
+    </tx_rkwshop_domain_model_orderitem>
+
+
+</dataset>

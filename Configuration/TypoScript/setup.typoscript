@@ -159,7 +159,7 @@ plugin.tx_rkwshop {
 	persistence {
 		storagePid = {$plugin.tx_rkwshop.persistence.storagePid}
         permanentProperties {
-            RKW\RkwShop\Domain\Model\OrderItem = product
+            RKW\RkwShop\Domain\Model\OrderItem = product, order
             RKW\RkwShop\Domain\Model\Order = frontendUser,shippingAddress
             RKW\RkwShop\Domain\Model\Product = productBundle
             RKW\RkwShop\Domain\Model\ShippingAddress = frontendUser
