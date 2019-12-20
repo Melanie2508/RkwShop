@@ -65,16 +65,6 @@ class OrderManagerTest extends FunctionalTestCase
     protected $coreExtensionsToLoad = [];
 
     /**
-     * @var \RKW\RkwShop\Domain\Model\Order
-     */
-    private $globalFixture = null;
-
-    /**
-     * @var \TYPO3\CMS\Extbase\Mvc\Request
-     */
-    private $globalRequest = null;
-
-    /**
      * @var \RKW\RkwShop\Orders\OrderManager
      */
     private $subject = null;
@@ -124,11 +114,6 @@ class OrderManagerTest extends FunctionalTestCase
      */
     private $objectManager;
 
-    /**
-     * @var array
-     */
-    private $maxNumbers;
-
 
     /**
      * Setup
@@ -175,31 +160,6 @@ class OrderManagerTest extends FunctionalTestCase
         $this->privacyRepository = $this->objectManager->get(PrivacyRepository::class);
         $this->registrationRepository = $this->objectManager->get(RegistrationRepository::class);
 
-        //$this->globalRequest = $this->objectManager->get(Request::class);
-
-        // Calculating max database uids
-        $this->maxNumbers = [
-            'frontendUser' => $this->frontendUserRepository->findAll()->count(),
-            'order' => $this->orderRepository->findAll()->count(),
-        ];
-
-        /** We need an non-persisted order here! */
-        /** @var \RKW\RkwShop\Domain\Model\ShippingAddress $shippingAddress */
-//        $shippingAddress = $this->shippingAddressRepository->findByUid(1);
-
-        /** @var \RKW\RkwShop\Domain\Model\Product $product */
-       // $product = $this->productRepository->findByUid(1);
-
-        /** @var \RKW\RkwShop\Domain\Model\OrderItem $orderItem */
-       /* $orderItem = GeneralUtility::makeInstance(OrderItem::class);
-        $orderItem->setProduct($product);
-        $orderItem->setAmount(5);
-
-        $this->globalFixture = GeneralUtility::makeInstance(Order::class);
-        $this->globalFixture->addOrderItem($orderItem);
-        $this->globalFixture->setShippingAddress($shippingAddress);
-        $this->globalFixture->setEmail('email@rkw.de');
-       */
 
     }
 

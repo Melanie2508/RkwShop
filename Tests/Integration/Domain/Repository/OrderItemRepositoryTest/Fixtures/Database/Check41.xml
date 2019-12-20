@@ -20,6 +20,7 @@
         <frontend_user>0</frontend_user>
         <status>0</status>
         <order_item>1,2,3</order_item>
+        <deleted>1</deleted>
     </tx_rkwshop_domain_model_order>
 
     <!-- order items -->
@@ -28,24 +29,8 @@
         <pid>1</pid>
         <amount>4</amount>
         <product>1</product>
-        <crdate>123</crdate>
-        <deleted>1</deleted>
-        <is_pre_order>1</is_pre_order>
         <ext_order>1</ext_order>
     </tx_rkwshop_domain_model_orderitem>
-    <tx_rkwshop_domain_model_orderitem>
-        <uid>2</uid>
-        <pid>1</pid>
-        <amount>4</amount>
-        <product>1</product>
-        <is_pre_order>1</is_pre_order>
-        <ext_order>1</ext_order>
-    </tx_rkwshop_domain_model_orderitem>
-    <tx_rkwshop_domain_model_orderitem>
-        <uid>3</uid>
-        <pid>1</pid>
-        <amount>4</amount>
-        <product>1</product>
-        <ext_order>1</ext_order>
-    </tx_rkwshop_domain_model_orderitem>
+
+
 </dataset>

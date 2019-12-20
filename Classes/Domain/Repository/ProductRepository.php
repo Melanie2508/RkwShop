@@ -138,10 +138,6 @@ class ProductRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query->getQuerySettings()->setIncludeDeleted(true);
         $query->getQuerySettings()->setIgnoreEnableFields(true);
 
-        $parser = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Storage\\Typo3DbQueryParser');
-        $queryParts = $parser->parseQuery($query);
-        file_put_contents('/var/www/komze/data.txt', print_r($queryParts, true));
-
         return $query->execute();
     }
 

@@ -418,6 +418,12 @@ class Product extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function getAllowSingleOrder()
     {
+        if (
+            ($this->getRecordType() != '\RKW\RkwShop\Domain\Model\ProductBundle')
+            && ($this->getRecordType() != '\RKW\RkwShop\Domain\Model\ProductSubscription')
+        ){
+            return 99;
+        }
         return $this->allowSingleOrder;
     }
 

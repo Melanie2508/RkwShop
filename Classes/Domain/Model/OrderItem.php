@@ -27,6 +27,24 @@ class OrderItem extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
+     * @var integer
+     */
+    protected $crdate;
+
+
+    /**
+     * @var integer
+     */
+    protected $tstamp;
+
+
+    /**
+     * @var integer
+     */
+    protected $deleted;
+
+
+    /**
      * order
      *
      * @var \RKW\RkwShop\Domain\Model\Order
@@ -64,6 +82,53 @@ class OrderItem extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $status = 0;
 
+    /**
+     * Returns the crdate value
+     *
+     * @return integer
+     * @api
+     */
+    public function getCrdate()
+    {
+        return $this->crdate;
+    }
+
+
+    /**
+     * Returns the tstamp value
+     *
+     * @return integer
+     * @api
+     */
+    public function getTstamp()
+    {
+        return $this->tstamp;
+    }
+
+
+    /**
+     * Sets the deleted value
+     *
+     * @param integer $deleted
+     * @api
+     */
+    public function setDeleted($deleted)
+    {
+        $this->deleted = $deleted;
+    }
+
+
+    /**
+     * Returns the deleted value
+     *
+     * @return integer
+     * @api
+     */
+    public function getDeleted()
+    {
+        return $this->deleted;
+        //===
+    }
 
 
     /**

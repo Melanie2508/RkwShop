@@ -102,7 +102,7 @@ call_user_func(
         //=================================================================
         // Register Logger
         //=================================================================
-        $GLOBALS['TYPO3_CONF_VARS']['LOG']['RKW'][$extKey]['writerConfiguration'] = array(
+        $GLOBALS['TYPO3_CONF_VARS']['LOG']['RKW']['RkwShop']['writerConfiguration'] = array(
 
             // configuration for WARNING severity, including all
             // levels with higher severity (ERROR, CRITICAL, EMERGENCY)
