@@ -1,0 +1,29 @@
+{namespace rkwMailer=RKW\RkwMailer\ViewHelpers}
+{namespace rkwRegistration=RKW\RkwRegistration\ViewHelpers}
+
+<f:layout name="Email/{mailType}" />
+
+
+<!-- PLAINTEXT -->
+<f:section name="Plaintext">
+	=============================================================\n
+	<rkwMailer:frontend.translate key="partials.email.billingAddress.billingAddress" languageKey="{language}" extensionName="rkwShop" />\n
+	=============================================================\n
+    {frontendUser.email}\n
+	<f:if condition="{frontendUser.company}">{frontendUser.company}\n</f:if>
+	<f:if condition="{frontendUser.title}"><rkwRegistration:title title="{frontendUser.title}" /> </f:if>{frontendUser.firstName} {frontendUser.lastName}\n
+	{frontendUser.address}\n
+	{frontendUser.zip} {frontendUser.city}\n
+</f:section>
+
+<!-- HTML -->
+<f:section name="Html">
+	<h2><rkwMailer:frontend.translate key="partials.email.billingAddress.billingAddress" languageKey="{language}" extensionName="rkwShop" /></h2>
+	<p>
+        {frontendUser.email}<br/>
+		<f:if condition="{frontendUser.company}">{frontendUser.company}<br/></f:if>
+        <f:if condition="{frontendUser.title}"><rkwRegistration:title title="{frontendUser.title}" /> </f:if>{frontendUser.firstName} {frontendUser.lastName}<br/>
+		{frontendUser.address}<br/>
+		{frontendUser.zip} {frontendUser.city}
+	</p>
+</f:section>
